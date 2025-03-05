@@ -6,4 +6,6 @@
 ---
 
 - 첫 번째 변경 커밋입니다.
-- This is secondary commit in local
+- 로컬에서 이루어진 두 번째 변경 커밋입니다.
+
+---
