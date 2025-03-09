@@ -13,6 +13,7 @@
 
 int main(void)
 {
+    system("while true; do afplay baseball.mp3; done &"); 
     int threeNumbers [3];
     int yourNumbers [3];
     int strike = 0;
@@ -48,10 +49,10 @@ int main(void)
     printf("   진행하시려면 엔터를 누르세요\n");
     printf("-----------------------------------\n");
     getchar();
-    printf("컴퓨터가 생성한 숫자는\n\n"); // 나중에 주석처리
+    printf("컴퓨터가 3개의 숫자를 생성했습니다!!\n\n"); // 나중에 주석처리
     for(int i = 0; i < 3; i++)
     {
-        printf("%d 입니다.\n\n", threeNumbers[i]);
+        // printf("%d 입니다.\n\n", threeNumbers[i]);
     }
 
     int attempts = 0; // 시도횟수 카운팅을 위한 변수
@@ -75,7 +76,7 @@ int main(void)
                 scanf("%d", &num); // 숫자 일단 입력받아서 num에 입력
                 for (int j = 0; j < i; ++j) { 
                     if (yourNumbers [j] == num){ // num 데이터가 배열에 중복되는지 체크해서 조건화
-                        printf("\n중복되지 않은 숫자를 넣어주세요!\n\n"); // 한번만 출력되게 하려면 어떻게해야하지??????????
+                        printf("\n중복되지 않은 숫자를 넣어주세요!\n\n");
                         duplication = 1;  // 중복되면 변수값 1으로 do 문 반복
                         break;            
                     }
@@ -93,13 +94,11 @@ int main(void)
             }
             else
             {
-                int found = 0;
                 for (int j = 0; j < 3 ; j++)
                 {
-                    if (threeNumbers[i] == yourNumbers[j])
+                    if (i != j && threeNumbers[i] == yourNumbers[j])
                     {
                         ball++;
-                        found = 1;
                         break;
                     }
                 }
@@ -120,8 +119,10 @@ int main(void)
         printf("-----------------------------------\n");
     } while(strike < 3);
 
+    printf("  축하합니다! %d번 시도만에 모든 숫자를 맞추셨어요!!\n", attempts);
+    printf("-----------------------------------\n");
     
-    
+    system("pkill afplay");
 
     return 0;
 
