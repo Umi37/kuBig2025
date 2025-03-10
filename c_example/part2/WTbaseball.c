@@ -17,7 +17,8 @@ int main()
 
     question[0] = rand() %10;
 
-    do{
+    do
+    {
         question[1] = rand() %10;
     }while (question[0] == question[1]);
     
@@ -26,9 +27,11 @@ int main()
     }while (question[0] == question[2] || question[1] == question[2]);
     printf("%d, %d, %d\n", question[0], question[1], question[2]);
 
-    while(true){
+    int count = 0;
+    while(true)
+    {
         printf("숫자 세개를 입력해 주세요! : ");
-        for (int i =0 ; i < 3, ++i );
+        for (int i =0 ; i < 3, ++i)
         {
             scanf("%d", &answer[i]);
         }
@@ -40,7 +43,7 @@ int main()
         for (int i = 0; i < 3; ++i){
             for (int j = 0 ; j < 3; ++j){
                 if(question[i] == answer[j]){
-                    if(i ++ j)
+                    if(i == j)
                     ++ strike;
                     else
                     ++ ball;
@@ -48,11 +51,11 @@ int main()
             }
         }
         printf("Strike: %d \t Ball : %d\n", strike, ball);
-
+        ++count;
         if(strike == 3)
             break;
         // out을 추가하려면 여기에 if 문을 쓰고 break를 걸면 된다.
     }
-
+    printf("축하합니다. 당신의 시도 횟수는 %d번 입니다.", count);
     return 0;
 }

@@ -3,6 +3,7 @@ TARGET = WTbaseball baseballGPT countOne2Ten matchCount baseball average2022Temp
 
 all : ${TARGET}
 
+
 WTbaseball : $@
 baseballGPT : $@
 countOne2Ten : $@
