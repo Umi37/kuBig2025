@@ -3,6 +3,11 @@
         "stdio.h": "c",
         "limits.h": "c",
         "stdlib.h": "c",
-        "time.h": "c"
-    }
+        "time.h": "c",
+        "date.h": "c",
+        "fcntl.h": "c",
+        "string.h": "c",
+        "mysql.h": "c"
+    },
+    "cmake.sourceDirectory": "/home/woo/kuBig2025"
 }

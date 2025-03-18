@@ -4,6 +4,8 @@
 // 형식지적자, 숫자를 담은 변수 등 앞에는 쓸 수 없다!!!
 
 #include <stdio.h>
+#include <string.h>
+
 
 int main(void)
 {   
