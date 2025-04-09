@@ -8,7 +8,8 @@
         "fcntl.h": "c",
         "string.h": "c",
         "mysql.h": "c",
-        "interrupt.h": "c"
+        "interrupt.h": "c",
+        "stack.h": "c"
     },
     "cmake.sourceDirectory": "/home/woo/kuBig2025"
 }
