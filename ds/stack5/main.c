@@ -15,11 +15,11 @@ int main(void)
     pop(&s1, &re); printf("s1 2nd pop() : %d\n", re);
     pop(&s1, &re); printf("s1 3rd pop() : %d\n", re);
 
-    //pop(&1);
-
     printf("s1 1st pop() : %d\n", re);
     printf("s1 2nd pop() : %d\n", re);
     printf("s1 3rd pop() : %d\n", re);
+
+    //pop(&1);
 
     push(&s2, 900);
     push(&s2, 800);

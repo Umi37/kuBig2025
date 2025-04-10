@@ -26,11 +26,10 @@ void push(Queue *pq, int data)
     ++pq->rear;
 }
 
-int pop(Queue *pq)
+void pop(Queue *pq, int *pRe)
 {
     assert(pq->front != pq->rear);
-
     int i = pq->front;
     ++pq->front;
-    return pq->pArr[i];
+    *pRe = pq->pArr[i];
 }

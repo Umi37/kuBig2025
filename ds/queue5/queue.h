@@ -11,6 +11,6 @@ typedef struct queue {
 void initQueue(Queue *pq, int size);
 void cleanupQueue(Queue *pq);
 void push(Queue *pq, int data);
-int pop(Queue *pq);
+void pop(Queue *pq, int *pRe);
 
 #endif
