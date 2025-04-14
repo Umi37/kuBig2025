@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-printArr(int *arr, int len) {
+void printArr(int *arr, int len) {
     for (int i = 0; i < len; i++) {
         printf("%d ", arr[i]);
     }
