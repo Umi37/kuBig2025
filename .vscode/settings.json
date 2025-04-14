@@ -9,7 +9,9 @@
         "string.h": "c",
         "mysql.h": "c",
         "interrupt.h": "c",
-        "stack.h": "c"
+        "stack.h": "c",
+        "ostream": "cpp",
+        "complex": "cpp"
     },
     "cmake.sourceDirectory": "/home/woo/kuBig2025"
 }
