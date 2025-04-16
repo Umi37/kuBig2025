@@ -62,6 +62,25 @@ Complex Complex::operator++(int )
     return tmp;
 }
 
+double Complex::real()
+{
+    return re_;
+}
+
+double Complex::imag()
+{
+    return im_;
+}
+
+void Complex::real(double re)
+{
+    re_ = re;
+}
+
+void Complex::imag(double im)
+{
+    im_ = im;
+}
 /*
 the C programing language (일명 화이트북) 에서 증가연산자를 앞에 붙이던 관례때문에 앞에 붙이기도하고
 C++ 에서는 내부적으로 이런 차이가 있다는걸 이해한다면 앞에 붙이게됨

@@ -1,81 +1,60 @@
 #include <cassert>
-#include <iostream>
+#include "gcd.h"
 #include "rational.h"
 
-// 생성자들
-Rational::Rational(int num, int den) { // 일반적인 분수 생성
-    assert(den != 0);
-    this->num = num;
-    this->den = den;
+std::ostream& operator<<(std::ostream& out, const Rational& rhs)
+{
+    return out << rhs.num_ << "/" << rhs.den_;
 }
 
-Rational::Rational(int num) {           // 정수 입력 시 자동으로 분모를 1로 설정
-    this->num = num;
-    this->den = 1;
+void Rational::reduce()
+{
+    int g = gcd(num_, den_);
+    num_ = num_ / g;
+    den_ = den_ / g;
 }
 
-Rational::Rational() {                  // 기본값 0/1로 초기화
-    this->num = 0;
-    this->den = 1;
+Rational::Rational(int num, int den)
+: num_(num), den_(den)
+{
+    assert(den );
+
+        this->reduce();
 }
 
-// 📌 복사 생성자 (다른 Rational 객체로부터 복사)
-Rational::Rational(const Rational& rhs) {
-    this->num = rhs.num;
-    this->den = rhs.den;
+bool Rational::operator=(const Ratioanl& rhs) const
+{
+    return num_ == rhs.num_ && den_ == rhs.den_;
 }
 
-Rational::~Rational() {
-    // nothing special
+bool Rational::operator!=(const Ratioanl& rhs) const
+{
+    return !this->operator==(rhs);
 }
 
-// getter/setter
-int Rational::getNum() {
-    return this->num;
+const Rational Rational::operator+(const Rational& rhs) const
+{
+    Rational result(num_ * rhs.den_ + rhs.num_ * den_, den_ * rhs_);
+
+    return result;
 }
 
-int Rational::getDen() {
-    return this->den;
+int Rational::num() const
+{
+    return num_;
 }
 
-void Rational::setNum(int num) {
-    this->num = num;
+int Rational::den() const
+{
+    return den_;
 }
 
-void Rational::setDen(int den) {
-    if (den != 0) {
-        this->den = den;
-    }
+void Ratioanl::num(int num)
+{
+    num_= num;
 }
 
-// 📌 복사 대입 연산자
-Rational& Rational::operator=(const Rational& rhs) {
-    this->num = rhs.num;
-    this->den = rhs.den;
-    return *this;
-}
-
-// 📌 비교 연산자
-bool Rational::operator==(const Rational& rhs) {
-    return (this->num * rhs.den == rhs.num * this->den);
-}
-
-// 📌 덧셈 연산자
-const Rational Rational::operator+(const Rational& rhs) {
-    int n = this->num * rhs.den + rhs.num * this->den;
-    int d = this->den * rhs.den;
-    return Rational(n, d);
-}
-
-// 📌 뺄셈 연산자
-const Rational Rational::operator-(const Rational& rhs) {
-    int n = this->num * rhs.den - rhs.num * this->den;
-    int d = this->den * rhs.den;
-    return Rational(n, d);
-}
-
-// 📌 출력 연산자
-std::ostream& operator<<(std::ostream& out, const Rational& rhs) {
-    out << rhs.num << "/" << rhs.den;
-    return out;
+void Rational::den(int den)
+{
+    den_ = den;
 }
