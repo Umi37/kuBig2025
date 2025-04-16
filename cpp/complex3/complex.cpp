@@ -3,6 +3,7 @@
 std::ostream& operator<<(std::ostream& out, const Complex& rhs)
 {
     out << "(" << rhs.re << ", " << rhs.im << "i)"; 
+    return out;
 }   
 
 Complex::Complex(double re, double im) //default constructor
