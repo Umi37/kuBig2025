@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+      "ms-vscode.cpptools",            // C/C++ 지원 (IntelliSense, 디버그 등)
+      "ms-vscode.cmake-tools",         // CMake 프로젝트 빌드 지원 (선택)
+      "twxs.cmake",                    // CMake 문법 하이라이트 (선택)
+      "jeff-hykin.better-cpp-syntax"  // 가독성 좋은 문법 강조 (선택)
+    ],
+    "unwantedRecommendations": [
+      "platformio.platformio-ide"
+    ]
+  }
+  
