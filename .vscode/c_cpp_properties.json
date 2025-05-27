@@ -4,9 +4,10 @@
         "name": "Linux-C",
         "includePath": [
           "${workspaceFolder}/**",
-          "/usr/include",
+          "/usr/include/**",
           "/usr/lib/gcc/x86_64-linux-gnu/11/include",
-          "/usr/include/python3.10/**"
+          "/usr/include/python3.10/**",
+          "/usr/include/opencv4"
         ],
         "compilerPath": "/usr/bin/gcc",
         "cStandard": "gnu11",
