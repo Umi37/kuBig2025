@@ -8,8 +8,17 @@ string folderPath = "/home/woo/kuBig2025/opencv/data/";
 
 int main()
 {
+    // 이미지 불러오기
+    // lenna.bmp 이미지를 읽어서 img 변수에 저장
+    // lenna.bmp 파일이 존재하는 경로를 지정
+
     Mat img = imread(folderPath + "lenna.bmp");
+
+    // 행렬 생성 및 수학 연산 실습
+    // 2x2 행렬 생성
+    // 행렬의 데이터 타입은 CV_32FC1 (32-bit floating point, single channel)
     float data[] = {1, 1, 2, 3};
+
     Mat mat1(2, 2, CV_32FC1, data);
     cout << "mat1:\n"
          << mat1 << endl;
