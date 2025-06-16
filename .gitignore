@@ -8,3 +8,4 @@ __pychache__/
 *.mod.*
 .*.cmd
 .env
+workflow.md
